@@ -4,15 +4,16 @@ import { View, Text, Image, ScrollView } from 'react-native';
 import { FONTS, COLORS, SIZES, icons, images, dummyData } from '../../constants'
 
 
-import { Header, IconButton, CartQuantityButton, IconLabel, TextButton, LineDivider, Rating } from '../../components';
+import { Header, IconButton, CartQuantityButton, IconLabel
+    , TextButton, LineDivider, Rating,StepperInput } from '../../components';
 
 
-const FoodDetail = () => {
+const FoodDetail = ({navigation}) => {
 
     const [foodItem, setFoodItem] = React.useState(dummyData.vegBiryani)
 
     const [selectedSize, setSelectedSize] = React.useState("")
-
+    const[qty,setQty ] = React.useState(1)
     function renderHeader() {
         return (
             <Header
@@ -303,6 +304,32 @@ const FoodDetail = () => {
                     paddingBottom: SIZES.radius
                 }}
             >
+                {/* StepperInput */}
+                <StepperInput
+                value = {qty}
+                onAdd ={ () => setQty(qty+1)}
+                onMinus ={ () => {
+                    if(qty>1){
+                        setQty(qty-1)
+                    }    
+                }}
+                ></StepperInput>
+                
+                {/* TestButton */}
+                <TextButton 
+                    buttonContainerStyle={{
+                        flex:1,
+                        flexDirection: 'row',
+                        height:60,
+                        marginLeft:SIZES.radius,
+                        paddingHorizontal:SIZES.radius,
+                        borderRadius:SIZES.radius,
+                        backgroundColor:COLOR.primary
+                    }}
+                    label="Buy Now"
+                    label2="$15.99"
+                    opPress = {() => navigation.navigate("MyCart")}
+                ></TextButton>
             </View>
         )
     }

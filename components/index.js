@@ -6,6 +6,7 @@ import TextButton from "./TextButton";
 import LineDivider from "./LineDivider";
 import Rating from "./Rating";
 import StepperInput from "./StepperInput";
+import FooterTotal from "./FooterTotal";
 
 export { Header,
 IconButton,
@@ -14,4 +15,6 @@ CartQuantityButton,
 TextButton,
 LineDivider,
 Rating, 
-StepperInput }; 
+StepperInput,
+FooterTotal
+ }; 
