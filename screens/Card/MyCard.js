@@ -5,8 +5,8 @@ import {
     ScrollView
 } from 'react-native';
 
-import { Header, IconButtton, TextButton, CardItem } from '../../components';
-import {FONTS, SIZES, COLORS, Icons, dummyData} from '../../constants';
+import { Header, IconButton, TextButton, CardItem } from '../../components';
+import {FONTS, SIZES, COLORS, icons, dummyData} from '../../constants';
 const MyCard = ({ navigation }) => {
 
     const [selectedCard, setSelectedCard] =  React.useState(null)
