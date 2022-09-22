@@ -11,6 +11,7 @@ import FooterTotal from "./FooterTotal";
 import FormInput from "./FormInput";
 import FormInputCheck from "./FormInputCheck";
 import RadioButton from "./RadioButton";
+import TextIconButton from "./TextIconButton";
 
 export { Header,
 IconButton,
@@ -24,5 +25,6 @@ StepperInput,
 FooterTotal,
 FormInput,
 FormInputCheck,
-RadioButton
+RadioButton,
+TextIconButton
  }; 
