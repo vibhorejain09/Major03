@@ -5,6 +5,7 @@ import { COLORS, FONTS } from '../constants';
 
 const TextButton = ({
     buttonContainerStyle,
+    disabled,
     label,
     labelStyle,
     label2 ="",
@@ -21,6 +22,7 @@ const TextButton = ({
                 backgroundColor: COLORS.primary,
                 ...buttonContainerStyle
             }}
+            disabled = {disabled}
             onPress={onPress}
         >
 
